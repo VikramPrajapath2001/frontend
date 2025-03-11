@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h2>Upload JSON File</h2>
+  <label for="fileInput">Choose a JSON file:</label>
+  <input
+    id="fileInput"
+    type="file"
+    title="Choose a JSON file"
+    (change)="onFileSelected($event)"
+  />
+  <button class="btn btn-primary mt-2" (click)="onUpload()">Upload</button>
+</div>
