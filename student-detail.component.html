@@ -1,0 +1,9 @@
+<div class="container mt-4">
+  <h2>Student Details</h2>
+  <div *ngIf="student">
+    <p><strong>ID:</strong> {{ student.id }}</p>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>Date of Birth:</strong> {{ student.dateOfBirth }}</p>
+    <p><strong>Batch:</strong> {{ student.batch.name }}</p>
+  </div>
+</div>
