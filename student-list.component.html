@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <h2>Students</h2>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search by name"
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+    />
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of filteredStudents">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.dateOfBirth | date }}</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]="['/student', student.id]"
+          >
+            View Details
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
